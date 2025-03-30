@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Pembelajaran - EduIntegritas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                <span class="text-xl font-bold text-blue-800">EduIntegritas</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Beranda</a>
+                <a href="materials.html" class="text-blue-600 font-medium">Materi</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Forum</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Tantangan</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Peringkat</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Profil</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300">
+                    Masuk
+                </a>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Materi Pembelajaran</h1>
+            <div class="relative">
+                <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option>Semua Kategori</option>
+                    <option>Pengenalan Antikorupsi</option>
+                    <option>Etika & Kejujuran</option>
+                    <option>Gotong Royong</option>
+                    <option>Studi Kasus</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <!-- Category 1 -->
+            <div class="bg-blue-100 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                <div class="flex items-center">
+                    <i class="fas fa-graduation-cap text-blue-600 text-2xl mr-3"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-800">Pengenalan Antikorupsi</h3>
+                        <p class="text-sm text-gray-600">5 Materi</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category 2 -->
+            <div class="bg-green-100 border-l-4 border-green-500 p-4 rounded-r-lg">
+                <div class="flex items-center">
+                    <i class="fas fa-hand-holding-heart text-green-600 text-2xl mr-3"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-800">Etika & Kejujuran</h3>
+                        <p class="text-sm text-gray-600">8 Materi</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category 3 -->
+            <div class="bg-orange-100 border-l-4 border-orange-500 p-4 rounded-r-lg">
+                <div class="flex items-center">
+                    <i class="fas fa-people-carry text-orange-600 text-2xl mr-3"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-800">Gotong Royong</h3>
+                        <p class="text-sm text-gray-600">6 Materi</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category 4 -->
+            <div class="bg-purple-100 border-l-4 border-purple-500 p-4 rounded-r-lg">
+                <div class="flex items-center">
+                    <i class="fas fa-search-dollar text-purple-600 text-2xl mr-3"></i>
+                    <div>
+                        <h3 class="font-bold text-gray-800">Studi Kasus</h3>
+                        <p class="text-sm text-gray-600">10 Materi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Materials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Material 1 -->
+            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+                <div class="h-40 bg-blue-500 flex items-center justify-center">
+                    <i class="fas fa-play-circle text-white text-6xl opacity-80"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-gray-800">Pengertian Korupsi</h3>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Pemula</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Memahami konsep dasar korupsi dan bentuk-bentuknya dalam kehidupan sehari-hari.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">15 menit</span>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="#" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg font-medium transition duration-300">
+                        Mulai Belajar
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Material 2 -->
+            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+                <div class="h-40 bg-green-500 flex items-center justify-center">
+                    <i class="fas fa-question-circle text-white text-6xl opacity-80"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-gray-800">Kuis Integritas</h3>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Menengah</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Uji pemahamanmu tentang nilai-nilai integritas melalui kuis interaktif.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">10 menit</span>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="#" class="block w-full bg-green-600 hover:bg-green-700 text-white text-center py-2 rounded-lg font-medium transition duration-300">
+                        Mulai Kuis
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Material 3 -->
+            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+                <div class="h-40 bg-orange-500 flex items-center justify-center">
+                    <i class="fas fa-users text-white text-6xl opacity-80"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-gray-800">Gotong Royong Modern</h3>
+                        <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Pemula</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Menerapkan nilai gotong royong dalam kehidupan modern dan digital.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">20 menit</span>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="#" class="block w-full bg-orange-600 hover:bg-orange-700 text-white text-center py-2 rounded-lg font-medium transition duration-300">
+                        Mulai Belajar
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Material 4 -->
+            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+                <div class="h-40 bg-purple-500 flex items-center justify-center">
+                    <i class="fas fa-landmark text-white text-6xl opacity-80"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-gray-800">Kasus Korupsi A</h3>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Mahir</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Analisis mendalam tentang kasus korupsi di sektor pemerintahan.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">30 menit</span>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="#" class="block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-2 rounded-lg font-medium transition duration-300">
+                        Pelajari Kasus
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Material 5 -->
+            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+                <div class="h-40 bg-red-500 flex items-center justify-center">
+                    <i class="fas fa-balance-scale text-white text-6xl opacity-80"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-gray-800">Hukum Antikorupsi</h3>
+                        <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Menengah</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Memahami dasar-dasar hukum dan regulasi tentang pemberantasan korupsi.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">25 menit</span>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="#" class="block w-full bg-red-600 hover:bg-red-700 text-white text-center py-2 rounded-lg font-medium transition duration-300">
+                        Pelajari Materi
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Material 6 -->
+            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
+                <div class="h-40 bg-teal-500 flex items-center justify-center">
+                    <i class="fas fa-brain text-white text-6xl opacity-80"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-gray-800">Simulasi Etika</h3>
+                        <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full">Mahir</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Simulasi interaktif untuk melatih pengambilan keputusan etis.</p>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">40 menit</span>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="#" class="block w-full bg-teal-600 hover:bg-teal-700 text-white text-center py-2 rounded-lg font-medium transition duration-300">
+                        Mulai Simulasi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-shield-alt text-blue-400 text-2xl"></i>
+                        <span class="text-xl font-bold">EduIntegritas</span>
+                    </div>
+                    <p class="text-gray-400">Platform e-learning interaktif untuk mempelajari nilai-nilai antikorupsi dan gotong royong.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="materials.html" class="text-gray-400 hover:text-white transition">Materi</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Forum</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tantangan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Kontak</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">info@eduintegritas.id</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+62 123 4567 890</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Sosial Media</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 EduIntegritas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle would be added here (same as index.html)
+    </script>
+</body>
+</html>
