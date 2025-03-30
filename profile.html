@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pengguna - EduIntegritas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .progress-ring__circle {
+            transition: stroke-dashoffset 0.5s ease;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        .activity-item:not(:last-child) {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .badge-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                <span class="text-xl font-bold text-blue-800">EduIntegritas</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Beranda</a>
+                <a href="materials.html" class="text-gray-700 hover:text-blue-600 font-medium">Materi</a>
+                <a href="forum.html" class="text-gray-700 hover:text-blue-600 font-medium">Forum</a>
+                <a href="gamification.html" class="text-gray-700 hover:text-blue-600 font-medium">Tantangan</a>
+                <a href="profile.html" class="text-blue-600 font-medium">Profil</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300">
+                    Keluar
+                </a>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Left Column - Profile Info -->
+            <div class="lg:w-1/3">
+                <div class="bg-white rounded-xl shadow-sm p-6 sticky top-24">
+                    <!-- Profile Header -->
+                    <div class="text-center mb-6">
+                        <div class="relative inline-block mb-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-32 h-32 rounded-full border-4 border-blue-500">
+                            <button class="absolute bottom-0 right-0 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition">
+                                <i class="fas fa-camera text-sm"></i>
+                            </button>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Budi Santoso</h2>
+                        <p class="text-gray-600">@budisantoso</p>
+                        <p class="text-gray-500 mt-2 text-sm">Anggota sejak: 15 Januari 2023</p>
+                    </div>
+                    
+                    <!-- Level Progress -->
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="font-medium text-gray-800">Level 5 - Pejuang Integritas</h3>
+                            <span class="text-sm font-medium text-blue-600">75%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Stats Overview -->
+                    <div class="grid grid-cols-3 gap-3 mb-6">
+                        <div class="bg-blue-50 p-3 rounded-lg text-center">
+                            <div class="text-blue-600 text-xl mb-1">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800">1,250</h3>
+                            <p class="text-xs text-gray-600">Poin</p>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded-lg text-center">
+                            <div class="text-green-600 text-xl mb-1">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800">24</h3>
+                            <p class="text-xs text-gray-600">Materi</p>
+                        </div>
+                        <div class="bg-purple-50 p-3 rounded-lg text-center">
+                            <div class="text-purple-600 text-xl mb-1">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800">18</h3>
+                            <p class="text-xs text-gray-600">Diskusi</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Badges Preview -->
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-lg font-bold text-gray-800">Lencana</h3>
+                            <a href="#" class="text-blue-600 text-sm hover:underline">Lihat Semua</a>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="badge-card bg-blue-100 p-3 rounded-lg text-center transition duration-300">
+                                <div class="text-blue-600 text-3xl mb-1">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <p class="text-xs font-medium text-gray-800">Pejuang Integritas</p>
+                            </div>
+                            <div class="badge-card bg-green-100 p-3 rounded-lg text-center transition duration-300">
+                                <div class="text-green-600 text-3xl mb-1">
+                                    <i class="fas fa-book-reader"></i>
+                                </div>
+                                <p class="text-xs font-medium text-gray-800">Pembelajar Aktif</p>
+                            </div>
+                            <div class="badge-card bg-yellow-100 p-3 rounded-lg text-center transition duration-300">
+                                <div class="text-yellow-600 text-3xl mb-1">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <p class="text-xs font-medium text-gray-800">Ahli Gotong Royong</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Edit Profile Button -->
+                    <div class="mt-6">
+                        <a href="#" class="block w-full bg-white border border-blue-600 text-blue-600 text-center py-2 rounded-lg font-medium hover:bg-blue-50 transition duration-300">
+                            <i class="fas fa-edit mr-2"></i> Edit Profil
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column - Activity & Achievements -->
+            <div class="lg:w-2/3">
+                <!-- Recent Activity -->
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h1 class="text-2xl font-bold text-gray-800">Aktivitas Terkini</h1>
+                        <a href="#" class="text-blue-600 text-sm hover:underline">Lihat Semua</a>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- Activity 1 -->
+                        <div class="activity-item pb-4">
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-2 rounded-lg mr-3">
+                                    <i class="fas fa-check text-green-600"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start">
+                                        <h3 class="font-medium text-gray-800">Menyelesaikan materi "Etika dalam Pekerjaan"</h3>
+                                        <span class="text-sm text-gray-500">2 jam lalu</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mt-1">+20 Poin | Level meningkat ke 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Activity 2 -->
+                        <div class="activity-item pb-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-lg mr-3">
+                                    <i class="fas fa-comment text-blue-600"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start">
+                                        <h3 class="font-medium text-gray-800">Memberikan komentar di forum</h3>
+                                        <span class="text-sm text-gray-500">5 jam lalu</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mt-1">+5 Poin | Diskusi "Cara melaporkan korupsi"</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Activity 3 -->
+                        <div class="activity-item pb-4">
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-2 rounded-lg mr-3">
+                                    <i class="fas fa-trophy text-purple-600"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start">
+                                        <h3 class="font-medium text-gray-800">Mendapatkan lencana "Ahli Gotong Royong"</h3>
+                                        <span class="text-sm text-gray-500">Kemarin</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mt-1">+50 Poin | Selesaikan semua materi gotong royong</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Activity 4 -->
+                        <div class="activity-item pb-4">
+                            <div class="flex items-start">
+                                <div class="bg-yellow-100 p-2 rounded-lg mr-3">
+                                    <i class="fas fa-fire text-yellow-600"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start">
+                                        <h3 class="font-medium text-gray-800">Menyelesaikan tantangan harian</h3>
+                                        <span class="text-sm text-gray-500">Kemarin</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mt-1">+50 Poin | Selesaikan 3 materi dalam sehari</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Activity 5 -->
+                        <div class="activity-item pb-4">
+                            <div class="flex items-start">
+                                <div class="bg-red-100 p-2 rounded-lg mr-3">
+                                    <i class="fas fa-heart text-red-600"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start">
+                                        <h3 class="font-medium text-gray-800">Mendapatkan 10 likes di komentar forum</h3>
+                                        <span class="text-sm text-gray-500">2 hari lalu</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mt-1">+15 Poin | Komentar tentang studi kasus korupsi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Learning Statistics -->
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">Statistik Pembelajaran</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Completion Rate -->
+                        <div>
+                            <h3 class="text-lg font-bold mb-4 text-gray-800">Tingkat Penyelesaian</h3>
+                            <div class="flex items-center justify-center">
+                                <div class="relative w-40 h-40">
+                                    <svg class="w-full h-full" viewBox="0 0 100 100">
+                                        <circle class="text-gray-200" stroke-width="8" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50" />
+                                        <circle class="text-blue-600" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-linecap="round" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50" />
+                                    </svg>
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <span class="text-3xl font-bold text-gray-800">75%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center text-gray-600 mt-2">24 dari 32 materi diselesaikan</p>
+                        </div>
+                        
+                        <!-- Category Progress -->
+                        <div>
+                            <h3 class="text-lg font-bold mb-4 text-gray-800">Progress per Kategori</h3>
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="flex justify-between items-center mb-1">
+                                        <span class="text-sm font-medium text-gray-700">Antikorupsi</span>
+                                        <span class="text-xs font-medium text-blue-600">80%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between items-center mb-1">
+                                        <span class="text-sm font-medium text-gray-700">Etika & Kejujuran</span>
+                                        <span class="text-xs font-medium text-green-600">65%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-600 h-2 rounded-full" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between items-center mb-1">
+                                        <span class="text-sm font-medium text-gray-700">Gotong Royong</span>
+                                        <span class="text-xs font-medium text-yellow-600">90%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-yellow-500 h-2 rounded-full" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between items-center mb-1">
+                                        <span class="text-sm font-medium text-gray-700">Studi Kasus</span>
+                                        <span class="text-xs font-medium text-purple-600">50%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-purple-600 h-2 rounded-full" style="width: 50%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Badges Collection -->
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800">Koleksi Lencana</h2>
+                        <span class="text-gray-600">8 dari 24 lencana terkumpul</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- Badge 1 -->
+                        <div class="badge-card bg-blue-50 p-4 rounded-lg text-center transition duration-300">
+                            <div class="text-blue-600 text-4xl mb-2">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-1">Pejuang Integritas</h3>
+                            <p class="text-xs text-gray-600">Selesaikan level 5</p>
+                            <div class="mt-2 text-blue-500">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Badge 2 -->
+                        <div class="badge-card bg-green-50 p-4 rounded-lg text-center transition duration-300">
+                            <div class="text-green-600 text-4xl mb-2">
+                                <i class="fas fa-book-reader"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-1">Pembelajar Aktif</h3>
+                            <p class="text-xs text-gray-600">Selesaikan 20 materi</p>
+                            <div class="mt-2 text-green-500">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Badge 3 -->
+                        <div class="badge-card bg-yellow-50 p-4 rounded-lg text-center transition duration-300">
+                            <div class="text-yellow-600 text-4xl mb-2">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-1">Ahli Gotong Royong</h3>
+                            <p class="text-xs text-gray-600">Selesaikan semua materi gotong royong</p>
+                            <div class="mt-2 text-yellow-500">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Badge 4 -->
+                        <div class="badge-card bg-purple-50 p-4 rounded-lg text-center transition duration-300">
+                            <div class="text-purple-600 text-4xl mb-2">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-1">Aktif Diskusi</h3>
+                            <p class="text-xs text-gray-600">Berpartisipasi dalam 10 diskusi</p>
+                            <div class="mt-2 text-purple-500">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Badge 5 (Locked) -->
+                        <div class="badge-card bg-gray-100 p-4 rounded-lg text-center transition duration-300 opacity-70">
+                            <div class="text-gray-400 text-4xl mb-2 relative">
+                                <i class="fas fa-medal"></i>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i class="fas fa-lock text-sm"></i>
+                                </div>
+                            </div>
+                            <h3 class="font-bold text-gray-500 mb-1">Master Integritas</h3>
+                            <p class="text-xs text-gray-400">Selesaikan semua materi antikorupsi</p>
+                        </div>
+                        
+                        <!-- Badge 6 (Locked) -->
+                        <div class="badge-card bg-gray-100 p-4 rounded-lg text-center transition duration-300 opacity-70">
+                            <div class="text-gray-400 text-4xl mb-2 relative">
+                                <i class="fas fa-trophy"></i>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i class="fas fa-lock text-sm"></i>
+                                </div>
+                            </div>
+                            <h3 class="font-bold text-gray-500 mb-1">Juara Forum</h3>
+                            <p class="text-xs text-gray-400">Dapatkan 100 likes di forum</p>
+                        </div>
+                        
+                        <!-- Badge 7 (Locked) -->
+                        <div class="badge-card bg-gray-100 p-4 rounded-lg text-center transition duration-300 opacity-70">
+                            <div class="text-gray-400 text-4xl mb-2 relative">
+                                <i class="fas fa-fire"></i>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i class="fas fa-lock text-sm"></i>
+                                </div>
+                            </div>
+                            <h3 class="font-bold text-gray-500 mb-1">Pembelajar Produktif</h3>
+                            <p class="text-xs text-gray-400">Selesaikan 5 tantangan harian berturut-turut</p>
+                        </div>
+                        
+                        <!-- Badge 8 (Locked) -->
+                        <div class="badge-card bg-gray-100 p-4 rounded-lg text-center transition duration-300 opacity-70">
+                            <div class="text-gray-400 text-4xl mb-2 relative">
+                                <i class="fas fa-star"></i>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <i class="fas fa-lock text-sm"></i>
+                                </div>
+                            </div>
+                            <h3 class="font-bold text-gray-500 mb-1">Legenda</h3>
+                            <p class="text-xs text-gray-400">Dapatkan semua lencana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-shield-alt text-blue-400 text-2xl"></i>
+                        <span class="text-xl font-bold">EduIntegritas</span>
+                    </div>
+                    <p class="text-gray-400">Platform e-learning interaktif untuk mempelajari nilai-nilai antikorupsi dan gotong royong.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="materials.html" class="text-gray-400 hover:text-white transition">Materi</a></li>
+                        <li><a href="forum.html" class="text-gray-400 hover:text-white transition">Forum</a></li>
+                        <li><a href="gamification.html" class="text-gray-400 hover:text-white transition">Tantangan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Kontak</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">info@eduintegritas.id</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+62 123 4567 890</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Sosial Media</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 EduIntegritas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle would be added here (same as index.html)
+    </script>
+</body>
+</html>
