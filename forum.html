@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Diskusi - EduIntegritas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .thread:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                <span class="text-xl font-bold text-blue-800">EduIntegritas</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Beranda</a>
+                <a href="materials.html" class="text-gray-700 hover:text-blue-600 font-medium">Materi</a>
+                <a href="forum.html" class="text-blue-600 font-medium">Forum</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Tantangan</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Peringkat</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Profil</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition duration-300">
+                    Masuk
+                </a>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Sidebar with Categories -->
+            <div class="md:w-1/4">
+                <div class="bg-white rounded-xl shadow-sm p-6 sticky top-24">
+                    <h2 class="text-xl font-bold mb-6 text-gray-800">Kategori Diskusi</h2>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="flex items-center text-blue-600 font-medium">
+                                <i class="fas fa-book mr-3"></i>
+                                Pertanyaan Seputar Materi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-blue-600 transition">
+                                <i class="fas fa-lightbulb mr-3"></i>
+                                Tips & Trik
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-blue-600 transition">
+                                <i class="fas fa-hands-helping mr-3"></i>
+                                Kolaborasi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-blue-600 transition">
+                                <i class="fas fa-comment-alt mr-3"></i>
+                                Saran & Masukan
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8">
+                        <a href="#" class="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-2 rounded-lg font-medium transition duration-300">
+                            <i class="fas fa-plus mr-2"></i> Buat Thread Baru
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Threads List -->
+            <div class="md:w-3/4">
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h1 class="text-2xl font-bold text-gray-800">Thread Diskusi Terbaru</h1>
+                        <div class="relative">
+                            <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option>Terbaru</option>
+                                <option>Populer</option>
+                                <option>Belum Terjawab</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Bar -->
+                    <div class="relative mb-6">
+                        <input type="text" placeholder="Cari thread..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                    
+                    <!-- Thread 1 -->
+                    <div class="thread bg-white border border-gray-200 rounded-lg p-4 mb-4 shadow-sm hover:shadow-md transition duration-300">
+                        <div class="flex items-start">
+                            <div class="flex flex-col items-center mr-4">
+                                <button class="text-gray-400 hover:text-blue-500 focus:outline-none">
+                                    <i class="fas fa-chevron-up text-xl"></i>
+                                </button>
+                                <span class="font-bold text-gray-800 my-1">24</span>
+                                <button class="text-gray-400 hover:text-blue-500 focus:outline-none">
+                                    <i class="fas fa-chevron-down text-xl"></i>
+                                </button>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <a href="#" class="text-lg font-bold text-gray-800 hover:text-blue-600">Bagaimana cara melaporkan tindakan korupsi di sekolah?</a>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Pertanyaan</span>
+                                </div>
+                                <p class="text-gray-600 mb-3">Saya melihat beberapa indikasi korupsi di sekolah saya terkait dana BOS. Bagaimana prosedur yang tepat untuk melaporkan ini?</p>
+                                <div class="flex justify-between items-center text-sm text-gray-500">
+                                    <div class="flex items-center">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-6 h-6 rounded-full mr-2">
+                                        <span>Budi Santoso</span>
+                                    </div>
+                                    <div class="flex items-center space-x-4">
+                                        <span><i class="far fa-comment mr-1"></i> 8 jawaban</span>
+                                        <span><i class="far fa-eye mr-1"></i> 124 dilihat</span>
+                                        <span>2 jam lalu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Thread 2 -->
+                    <div class="thread bg-white border border-gray-200 rounded-lg p-4 mb-4 shadow-sm hover:shadow-md transition duration-300">
+                        <div class="flex items-start">
+                            <div class="flex flex-col items-center mr-4">
+                                <button class="text-gray-400 hover:text-blue-500 focus:outline-none">
+                                    <i class="fas fa-chevron-up text-xl"></i>
+                                </button>
+                                <span class="font-bold text-gray-800 my-1">42</span>
+                                <button class="text-gray-400 hover:text-blue-500 focus:outline-none">
+                                    <i class="fas fa-chevron-down text-xl"></i>
+                                </button>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <a href="#" class="text-lg font-bold text-gray-800 hover:text-blue-600">Tips untuk menghindari gratifikasi di tempat kerja</a>
+                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Tips</span>
+                                </div>
+                                <p class="text-gray-600 mb-3">Saya baru bekerja di perusahaan swasta dan sering ditawari hadiah oleh vendor. Bagaimana cara menolaknya dengan sopan tanpa menyinggung?</p>
+                                <div class="flex justify-between items-center text-sm text-gray-500">
+                                    <div class="flex items-center">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="w-6 h-6 rounded-full mr-2">
+                                        <span>Anita Wijaya</span>
+                                    </div>
+                                    <div class="flex items-center space-x-4">
+                                        <span><i class="far fa-comment mr-1"></i> 15 jawaban</span>
+                                        <span><i class="far fa-eye mr-1"></i> 256 dilihat</span>
+                                        <span>1 hari lalu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Thread 3 -->
+                    <div class="thread bg-white border border-gray-200 rounded-lg p-4 mb-4 shadow-sm hover:shadow-md transition duration-300">
+                        <div class="flex items-start">
+                            <div class="flex flex-col items-center mr-4">
+                                <button class="text-gray-400 hover:text-blue-500 focus:outline-none">
+                                    <i class="fas fa-chevron-up text-xl"></i>
+                                </button>
+                                <span class="font-bold text-gray-800 my-1">18</span>
+                                <button class="text-gray-400 hover:text-blue-500 focus:outline-none">
+                                    <i class="fas fa-chevron-down text-xl"></i>
+                                </button>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <a href="#" class="text-lg font-bold text-gray-800 hover:text-blue-600">Proyek gotong royong membersihkan sungai</a>
+                                    <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Kolaborasi</span>
+                                </div>
+                                <p class="text-gray-600 mb-3">Kami dari komunitas RT 05 ingin mengadakan kegiatan bersih-bersih sungai. Siapa yang ingin bergabung minggu depan?</p>
+                                <div class="flex justify-between items-center text-sm text-gray-500">
+                                    <div class="flex items-center">
+                                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="User" class="w-6 h-6 rounded-full mr-2">
+                                        <span>Rudi Hartono</span>
+                                    </div>
+                                    <div class="flex items-center space-x-4">
+                                        <span><i class="far fa-comment mr-1"></i> 5 jawaban</span>
+                                        <span><i class="far fa-eye mr-1"></i> 89 dilihat</span>
+                                        <span>3 hari lalu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Thread 4 -->
+                    <div class="thread bg-white border border-gray-200 rounded-lg p-4 mb-4 shadow-sm hover:shadow-md transition duration-300">
+                        <div class="flex items-start">
+                            <div class="flex flex-col items-center mr-4">
+                                <button class="text-gray-400 hover:text-blue-500 focus:outline-none">
+                                    <i class="fas fa-chevron-up text-xl"></i>
+                                </button>
+                                <span class="font-bold text-gray-800 my-1">7</span>
+                                <button class="text-gray-400 hover:text-blue-500 focus:outline-none">
+                                    <i class="fas fa-chevron-down text-xl"></i>
+                                </button>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start mb-2">
+                                    <a href="#" class="text-lg font-bold text-gray-800 hover:text-blue-600">Saran untuk modul pembelajaran gotong royong</a>
+                                    <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Saran</span>
+                                </div>
+                                <p class="text-gray-600 mb-3">Menurut kalian, aktivitas apa yang cocok untuk mengajarkan nilai gotong royong kepada anak SD?</p>
+                                <div class="flex justify-between items-center text-sm text-gray-500">
+                                    <div class="flex items-center">
+                                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User" class="w-6 h-6 rounded-full mr-2">
+                                        <span>Dewi Lestari</span>
+                                    </div>
+                                    <div class="flex items-center space-x-4">
+                                        <span><i class="far fa-comment mr-1"></i> 12 jawaban</span>
+                                        <span><i class="far fa-eye mr-1"></i> 143 dilihat</span>
+                                        <span>5 hari lalu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="flex justify-center mt-8">
+                        <nav class="inline-flex rounded-md shadow">
+                            <a href="#" class="px-3 py-2 rounded-l-md border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-blue-600 font-medium">1</a>
+                            <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-gray-500 hover:bg-gray-50">2</a>
+                            <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-gray-500 hover:bg-gray-50">3</a>
+                            <a href="#" class="px-3 py-2 rounded-r-md border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-shield-alt text-blue-400 text-2xl"></i>
+                        <span class="text-xl font-bold">EduIntegritas</span>
+                    </div>
+                    <p class="text-gray-400">Platform e-learning interaktif untuk mempelajari nilai-nilai antikorupsi dan gotong royong.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="materials.html" class="text-gray-400 hover:text-white transition">Materi</a></li>
+                        <li><a href="forum.html" class="text-gray-400 hover:text-white transition">Forum</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tantangan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Kontak</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">info@eduintegritas.id</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+62 123 4567 890</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Sosial Media</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 EduIntegritas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle would be added here (same as index.html)
+    </script>
+</body>
+</html>
